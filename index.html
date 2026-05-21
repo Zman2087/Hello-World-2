@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Web Page Demo - Hello World 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Hello World 2</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Hello World 2</h1>
+            <p class="hero-subtitle">A Full-Featured Web Page Demo</p>
+            <button class="cta-button" onclick="scrollToSection('demo')">Explore Demo</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Modern Design</h3>
+                <p>Beautiful and responsive design that works on all devices</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast & Smooth</h3>
+                <p>Optimized performance with smooth animations and transitions</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Interactive</h3>
+                <p>Fully interactive elements with JavaScript functionality</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive</h3>
+                <p>Works perfectly on mobile, tablet, and desktop devices</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🐳</div>
+                <h3>Docker Ready</h3>
+                <p>Easily deployable with Docker containerization</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💯</div>
+                <h3>Production Ready</h3>
+                <p>Professional-grade code ready for production deployment</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <h2 class="section-title">Interactive Demo</h2>
+        <div class="demo-container">
+            <div class="demo-box">
+                <h3>Counter</h3>
+                <div class="counter-display" id="counterDisplay">0</div>
+                <div class="button-group">
+                    <button class="demo-button" onclick="incrementCounter()">+</button>
+                    <button class="demo-button" onclick="decrementCounter()">−</button>
+                    <button class="demo-button secondary" onclick="resetCounter()">Reset</button>
+                </div>
+            </div>
+
+            <div class="demo-box">
+                <h3>Color Mixer</h3>
+                <div class="color-display" id="colorDisplay"></div>
+                <button class="demo-button" onclick="randomColor()">Random Color</button>
+                <p id="colorCode" style="margin-top: 10px; text-align: center; font-family: monospace;"></p>
+            </div>
+
+            <div class="demo-box">
+                <h3>Todo List</h3>
+                <div class="input-group">
+                    <input type="text" id="todoInput" placeholder="Add a new task..." onkeypress="handleTodoKey(event)">
+                    <button class="demo-button" onclick="addTodo()">Add</button>
+                </div>
+                <ul class="todo-list" id="todoList"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number" data-target="1000">0</div>
+            <p>Happy Users</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="500">0</div>
+            <p>Projects Built</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="99">0</div>
+            <p>Uptime %</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="24">0</div>
+            <p>Support Hours</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Hello World 2. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
